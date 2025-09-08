@@ -1,0 +1,93 @@
+/*  Body styling for the full page */
+body {
+  margin: 0; /* Remove default browser margin */
+  font-family: Arial, sans-serif; /* Set default font */
+  height: 100vh; /* Full viewport height */
+  display: flex; /* Use flexbox for centering content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column; /* Stack elements vertically */
+
+  /* Default background before any interaction */
+  background-image: url('https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover; /* Cover the entire body */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat background */
+  color: white; /* Default text color */
+  text-shadow: 0 2px 4px rgba(0,0,0,0.7); /* Subtle text shadow for readability */
+}
+
+/*  Project title styling (top center overlay) */
+.project-title {
+  position: fixed; /* Stays fixed at the top while scrolling */
+  top: 16px; /* Distance from the top of the viewport */
+  left: 50%; /* Start from the horizontal center */
+  transform: translateX(-50%); /* Perfect horizontal centering */
+  margin: 0;
+  padding: 8px 16px; /* Spacing inside the title box */
+  background: rgba(0, 0, 0, 0.45); /* Semi-transparent dark background for readability */
+  color: #ffffff; /* White text */
+  font-size: 50px; /* Large font for desktop */
+  font-weight: 700; /* Bold text */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* Soft shadow for 3D effect */
+  z-index: 999; /* Make sure it stays above other elements */
+  text-align: center; /* Center text inside box */
+  letter-spacing: 0.6px; /* Slight spacing between letters */
+}
+
+/*  Mobile responsiveness: smaller title */
+@media (max-width: 480px) {
+  .project-title {
+    font-size: 16px; /* Reduce font size on small screens */
+    top: 10px; /* Adjust top spacing */
+    padding: 6px 10px; /* Adjust padding */
+  }
+}
+
+/*  Weather container box */
+.weather-container {
+  background: rgba(10, 10, 10, 0.8); /* Slightly transparent dark background */
+  padding: 20px; /* Inner spacing */
+  border-radius: 15px; /* Rounded corners */
+  text-align: center; /* Center content */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Subtle shadow */
+  width: 320px; /* Fixed width for container */
+}
+
+/* Input field styling */
+input {
+  padding: 10px; /* Inner spacing */
+  width: 80%; /* Width relative to container */
+  margin-bottom: 10px; /* Space below input */
+  border-radius: 8px; /* Rounded corners */
+  border: 1px solid #ccc; /* Light gray border */
+}
+
+/*  Button styling */
+button {
+  padding: 10px 20px; /* Inner spacing */
+  background: #4facfe; /* Blue gradient */
+  border: none; /* Remove default border */
+  border-radius: 8px; /* Rounded corners */
+  color: white; /* Text color */
+  cursor: pointer; /* Pointer on hover */
+  font-weight: bold; /* Bold text */
+}
+
+/*  Button hover effect */
+button:hover {
+  background: #00c6ff; /* Lighter blue on hover */
+}
+
+/*  Result box styling */
+.result-box {
+  margin-top: 20px; /* Space above results */
+  font-size: 16px; /* Text size */
+}
+
+/*  Weather icon styling */
+.weather-icon {
+  font-size: 50px; /* Large emoji/icon */
+  margin: 10px 0; /* Vertical spacing */
+}
